@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<style>
+ .container{
+    width: 400px;
+    height: 450px;
+    margin: 50px auto;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 20px;
+    text-align: center;
+ }
+ .image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 25px;
+ }
+ .likesContainer{
+    display: flex;
+    justify-content: space-evenly;
+ }
+ h4{
+    color: blue;
+ }
+ .but{
+    display: flex;
+    justify-content: space-evenly;
+ }
+ .but1{
+    width: 100px;
+    height: 30px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+ }
+ .but2{
+    width: 100px;
+    height: 30px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 10px;
+ }
+</style>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script>
+    const element=React.createElement('div',{className:"container"},React.createElement(
+        "img",
+  {src: "https://img.freepik.com/free-photo/smiling-confident-businesswoman-posing-with-arms-folded_1262-20950.jpg",className:'image'},
+  null
+    ),
+    React.createElement('h2',{style:{color:'red'}},"Alexandra Caulea"),
+    React.createElement('h3',{style:{color:"green"}},'I enjoyed drinking a cup of coffee every day'),
+    React.createElement('div',{className:"likesContainer"},
+    React.createElement('div',{},React.createElement('h4',{},'172'),
+    React.createElement('h4',{},'POSTS')),
+    React.createElement('div',{},React.createElement('h4',{},'172'),
+    React.createElement('h4',{},'POSTS')),
+    React.createElement('div',{},React.createElement('h4',{},'172'),
+    React.createElement('h4',{},'POSTS'))
+    ),
+    React.createElement('div',{className:"but"},React.createElement('button',{className:"but1"},"FOLLOW"),
+    React.createElement('button',{className:'but2'},"MESSAGE")
+    )
+
+    )
+   
+    const root=ReactDOM.createRoot(document.getElementById('root'))
+    root.render(element)
+</script>
+</html>
